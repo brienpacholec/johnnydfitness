@@ -19,12 +19,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //STRIPE API
     {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ['Product','Sku','Price'],
         secretKey: `${process.env.STRIPE_SECRET_KEY}`, //SECRET KEY
         downloadFiles: true,
+      },
+    },
+    //ENVRIONMENT VARIABLES API
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["STRIPE_PUBLISHABLE_KEY", "STRIPE_SECRET_KEY"]
       },
     },
     `gatsby-transformer-sharp`,
