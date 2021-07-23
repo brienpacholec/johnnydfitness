@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import getStripe from "../utils/stripejs"
+import { loadStripe } from "@stripe/stripe-js"
 
 const buttonStyles = {
   fontSize: "13px",
@@ -17,6 +17,14 @@ const buttonDisabledStyles = {
   cursor: "not-allowed",
 }
 
+let stripePromise
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(`${process.env.STRIPE_PUBLISHABLE_KEY}`)
+  }
+  return stripePromise
+}
+
 const Checkout = () => {
   const [loading, setLoading] = useState(false)
 
@@ -27,9 +35,9 @@ const Checkout = () => {
     const stripe = await getStripe()
     const { error } = await stripe.redirectToCheckout({
       mode: "payment",
-      lineItems: [{ price: process.env.GATSBY_BUTTON_PRICE_ID, quantity: 1 }],
-      successUrl: `${window.location.origin}/page-2/`,
-      cancelUrl: `${window.location.origin}/`,
+      lineItems: [{ price: "price_1JGEAmHWK48SXCj7azGCoK7p", quantity: 1 }],
+      successUrl: `http://localhost:8000/page-2/`,
+      cancelUrl: `http://localhost:8000/`,
     })
 
     if (error) {
@@ -46,7 +54,7 @@ const Checkout = () => {
       }
       onClick={redirectToCheckout}
     >
-      BUY MY BOOK
+      Buy my basic workout model
     </button>
   )
 }
