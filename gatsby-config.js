@@ -22,11 +22,9 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        options: {
         objects: ['Product','Sku','Price'],
         secretKey: `${process.env.STRIPE_SECRET_KEY}`,
-        downloadFiles: false,
-      }
+        downloadFiles: true,
       },
     },
     `gatsby-transformer-sharp`,
