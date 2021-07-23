@@ -54,7 +54,7 @@ const Checkout = () => {
       }
       onClick={redirectToCheckout}
     >
-      Buy my basic workout model
+      Check out my basic nutrional plan!
     </button>
   )
 }
