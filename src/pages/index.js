@@ -5,11 +5,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Checkout from "../components/checkout"
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people</h1>
-    <p>I'm Johnny Mother FUCKING D YALL, BIRD UP!!!</p>
+    <p>I'm Johnny Mother FUCKING D YALL, BIRD UP!!! SHEESH</p>
     <p>Now go build something great.</p>
     <StaticImage
       src="../images/gatsby-astronaut.png"
@@ -23,6 +25,8 @@ const IndexPage = () => (
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
+
+    <Checkout />
   </Layout>
 )
 
