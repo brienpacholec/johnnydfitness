@@ -5,9 +5,21 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Johnny D. Fitness`,
+    slogan: `Building the best you.`,
     description: `Welcome to Johnny D. Fitness! I offer nutrional dietary plans and will soon be selling merchandise on my site. Let's build the best you!`,
     author: `@brienpacholec`,
     siteUrl: `https://brienpacholec.com/`,
+    menuLinks: [
+     
+      {
+        name:'Fitness Plans',
+        link:'/fitness'
+      },
+      {
+        name:'Nutrition Plans',
+        link:'/nutrition'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

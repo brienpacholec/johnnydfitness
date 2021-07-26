@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import getStripe from "../../utils/stripejs"
+import { StaticImage } from "gatsby-plugin-image"
 
 const cardStyles = {
   display: "flex",
@@ -66,9 +67,11 @@ const ProductCard = ({ product }) => {
     <div style={cardStyles}>
       <form onSubmit={handleSubmit}>
         <fieldset style={{ border: "none" }}>
+          <img src={product.images} alt={product.name}></img>
           <legend>
-            <h4>{product.name}</h4>
+            <h4 style={{ marginBottom: "-5px" }}>{product.name}</h4>
           </legend>
+            <p>{product.description}</p>
           <label>
             Price{" "}
             <select name="priceSelect">
@@ -88,7 +91,7 @@ const ProductCard = ({ product }) => {
               : buttonStyles
           }
         >
-          BUY ME
+          Purchase
         </button>
       </form>
     </div>

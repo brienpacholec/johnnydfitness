@@ -10,14 +10,14 @@ const containerStyles = {
   padding: "1rem 0 1rem 0",
 }
 
-const Products = () => {
+const Products = ({filter,}) => {
   return (
     <StaticQuery
       query={graphql`
         query ProductPrices {
           prices: allStripePrice(
-            filter: { active: { eq: true } }
-            sort: { fields: [unit_amount] }
+            filter: {active: {eq: true}, product: {active: {eq: true}}}
+            sort: {fields: [unit_amount]}
           ) {
             edges {
               node {
@@ -28,6 +28,8 @@ const Products = () => {
                 product {
                   id
                   name
+                  images
+                  description
                 }
               }
             }
@@ -36,14 +38,20 @@ const Products = () => {
       `}
       render={({ prices }) => {
         // Group prices by product
+        const nameFilter = {filter}['filter']
         const products = {}
         for (const { node: price } of prices.edges) {
           const product = price.product
-          if (!products[product.id]) {
-            products[product.id] = product
-            products[product.id].prices = []
-          }
-          products[product.id].prices.push(price)
+          const name = product.name
+          
+          if(name.includes(nameFilter)){
+            if (!products[product.id]) {
+              products[product.id] = product
+              products[product.id].prices = []
+            }
+            products[product.id].prices.push(price)
+          } 
+     
         }
         return (
           <div style={containerStyles}>

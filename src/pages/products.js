@@ -5,12 +5,12 @@ import SEO from "../components/seo"
 
 import Products from "../components/Products/Products"
 
-const AdvancedExamplePage = () => (
+const FullCart = () => (
   <Layout>
-    <SEO title="Advanced Example" />
-    <h1>This is the advanced example</h1>
-    <Products />
+    <SEO title="All Products" />
+    <h1>All my products</h1>
+    <Products filter=""/>
   </Layout>
 )
 
-export default AdvancedExamplePage
+export default FullCart
