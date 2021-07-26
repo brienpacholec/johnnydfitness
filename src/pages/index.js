@@ -9,7 +9,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
-import Button from 'react-bootstrap/Button'
 
 
 const IndexPage = () => (
@@ -57,10 +56,8 @@ const IndexPage = () => (
           <StaticImage
             src="../images/johnny_4.jpg"
             alt="Johnny D. Headshot"
-            // width={300}
             objectFit="contain"
             formats={["AUTO", "WEBP", "AVIF"]}
-            alt="A Gatsby astronaut"
             style={{ 
               marginBottom: `1.45rem`,
               maxHeight:'300px',

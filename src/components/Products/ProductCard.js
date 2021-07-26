@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import getStripe from "../../utils/stripejs"
-import { StaticImage } from "gatsby-plugin-image"
 
 const cardStyles = {
   display: "flex",
