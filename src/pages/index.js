@@ -32,7 +32,7 @@ const IndexPage = () => (
       {/* LINK to products */}
       <Row className="text-center">
         <Col>
-          <AniLink to="/products/" paintDrip duration={1} hex="#000" ><Alert variant="primary">View all my products!</Alert></AniLink>
+          <AniLink to="/products/" paintDrip duration={5} hex="#000" ><Alert variant="primary">View all my products!</Alert></AniLink>
         </Col>
       </Row>
       
