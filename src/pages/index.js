@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 const IndexPage = () => (
@@ -28,7 +29,7 @@ const IndexPage = () => (
       {/* LINK to products */}
       <Row className="text-center">
         <Col>
-          <Link to="/products/"><Alert variant="primary">View all my products!</Alert></Link>
+          <AniLink to="/products/" paintDrip duration={1} hex="#000" ><Alert variant="primary">View all my products!</Alert></AniLink>
         </Col>
       </Row>
       

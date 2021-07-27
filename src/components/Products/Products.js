@@ -9,26 +9,26 @@ const Products = ({filter,}) => {
     <StaticQuery
       query={graphql`
         query ProductPrices($order: [SortOrderEnum] = ASC) {
-  prices: allStripePrice(
-    filter: {active: {eq: true}, product: {active: {eq: true}}}
-    sort: {fields: [unit_amount], order: $order}
-  ) {
-    edges {
-      node {
-        id
-        active
-        currency
-        unit_amount
-        product {
-          id
-          name
-          images
-          description
+          prices: allStripePrice(
+            filter: {active: {eq: true}, product: {active: {eq: true}}}
+            sort: {fields: [unit_amount], order: $order}
+          ) {
+            edges {
+              node {
+                id
+                active
+                currency
+                unit_amount
+                product {
+                  id
+                  name
+                  images
+                  description
+                }
+              }
+            }
+          }
         }
-      }
-    }
-  }
-}
       `}
       render={({ prices }) => {
         // Group prices by product
