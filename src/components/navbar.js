@@ -9,7 +9,7 @@ const NavigationBar = ({siteTitle, menuLinks, siteSlogan}) => (
     <div style={{margin: `0 auto`,maxWidth: 960,}}>
     <Navbar bg="transparent" expand="lg" variant="dark" color="indigo">
     <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
             <h1 style={{ margin: 0 }}>
                 <Link to="/" style={{ color: `white`, textDecoration: `none`,}}>{siteTitle}</Link>
             </h1>

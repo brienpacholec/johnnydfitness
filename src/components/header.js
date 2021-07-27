@@ -8,6 +8,7 @@ const Header = ({siteTitle, menuLinks, siteSlogan}) => (
     <div style={{background: `black`,marginBottom: `0.05rem`, paddingBottom: `1.45rem`,}}>
         <NavigationBar siteTitle={siteTitle} siteSlogan={siteSlogan} menuLinks={menuLinks}/>
     </div>
+    <br/>
   </header>
 )
 
