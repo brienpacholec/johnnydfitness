@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -22,7 +21,11 @@ const IndexPage = () => (
       <Row>
         <Col>
           <h1>Welcome to Johnny D. Fitness!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis nisl lorem, ac dictum nulla dignissim nec. Suspendisse feugiat magna quis dolor egestas commodo. Nullam vulputate ullamcorper augue, eget eleifend dui pharetra vel. Nulla porttitor lorem ut lorem dapibus, ut viverra tellus finibus. Nam urna quam, pellentesque tempor sapien eget, bibendum gravida quam. Vivamus eu elit ac tellus lacinia suscipit nec quis mi. Morbi fringilla, justo id malesuada aliquet, neque enim placerat nibh, nec tempor dolor quam sit amet turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ornare vulputate porta. Nam ut metus euismod, cursus sem et, ultrices elit. Aliquam urna nisi, auctor sed dolor sit amet, blandit pretium ex. Morbi ac dui placerat, molestie nisi in, placerat eros. Curabitur posuere neque eu diam molestie egestas vitae at mauris. Etiam interdum odio at erat bibendum sollicitudin.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis nisl lorem, ac dictum nulla dignissim nec. Suspendisse feugiat magna quis dolor egestas commodo. Nullam vulputate ullamcorper augue, eget eleifend dui pharetra vel. </p>
+          <ul>
+            <li> Donec ornare vulputate porta. Nam ut metus euismod, cursus sem et, ultrices elit.</li>
+            <li>Aliquam urna nisi, auctor sed dolor sit amet, blandit pretium ex. Morbi ac dui placerat, molestie nisi in, placerat eros. Curabitur posuere neque eu diam molestie egestas vitae at mauris. Etiam interdum odio at erat bibendum sollicitudin.</li>
+          </ul>
         </Col>
       </Row>
 

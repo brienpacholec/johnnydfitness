@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import * as React from "react"
-import { Link } from "gatsby"
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -12,8 +11,8 @@ const NavigationBar = ({siteTitle, menuLinks, siteSlogan}) => (
     <Container>
         <Navbar.Brand >
             <AniLink to="/" paintDrip duration={1} hex="#000" style={{color: `white`, textDecoration: `none`,}}>
-                <h1 style={{ margin: 0 }}>{siteTitle}</h1>
-                <h4 style={{marginBottom: `-1.0rem`,}}>{siteSlogan}</h4>
+                <h1 id="siteTitle" style={{ margin: 0 }}>{siteTitle}</h1>
+                <h4 id="siteSlogan" style={{marginBottom: `-1.0rem`,}}>{siteSlogan}</h4>
             </AniLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{marginTop:`10px`}}/>
