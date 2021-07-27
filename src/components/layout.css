@@ -636,9 +636,18 @@ pre tt:after {
   }
 }
 
-@media only screen and (max-width: 349px) {
+@media only screen and (max-width: 349px) and (min-width: 300px){
   #siteTitle{
     font-size: 24px !important;
+  }
+  #siteSlogan{
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 299px){
+  #siteTitle{
+    font-size: 20px !important;
   }
   #siteSlogan{
     font-size: 12px !important;
