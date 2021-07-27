@@ -10,15 +10,22 @@ module.exports = {
     author: `@brienpacholec`,
     siteUrl: `https://brienpacholec.com/`,
     menuLinks: [
-     
       {
-        name:'Fitness Plans',
+        name:'Fitness',
         link:'/fitness'
       },
       {
-        name:'Nutrition Plans',
+        name:'Nutrition',
         link:'/nutrition'
-      }
+      },
+      {
+        name:'Social Media',
+        link:'/social'
+      },
+      {
+        name:'Contact',
+        link:'/contact'
+      },
     ]
   },
   plugins: [

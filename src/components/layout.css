@@ -595,3 +595,21 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* CUSTOM */
+.nav-item{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.navbar-collapse.collapse{
+  margin-top:10px !important;
+  padding-left: 10px !important;
+}
+.nav-item > a{
+  transition: 0.3s !important;
+  color: rgb(175, 175, 175) !important;
+}
+.nav-item > a:hover, .nav-item > a:focus{
+  background-color: #222222;
+  color: white !important;
+  border-radius: 5px;
+}
