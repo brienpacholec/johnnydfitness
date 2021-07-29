@@ -646,6 +646,10 @@ pre tt:after {
     margin: 3px 0px !important;
   }
 
+  .nav-item > a{
+    padding: 2px 0px !important;
+  }
+
  
 }
 
@@ -663,6 +667,9 @@ pre tt:after {
     margin-top: 20px !important;
     padding-left: 0px !important;
   }
+  .nav-item > a{
+    padding: 2px 0px !important;
+  }
 }
 
 /* GALAXY FOLD */
@@ -677,5 +684,8 @@ pre tt:after {
   .navbar-collapse.collapse{
     margin-top: 20px !important;
     padding-left: 0px !important;
+  }
+  .nav-item > a{
+    padding: 2px 0px !important;
   }
 }
