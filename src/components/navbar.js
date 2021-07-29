@@ -22,7 +22,9 @@ const NavigationBar = ({siteTitle, menuLinks, siteSlogan}) => (
                 menuLinks.map(link => (
                     <Nav.Item key={link.name}>
                         {/* <Nav.Link style={{color:`white`}} href={link.link}>{link.name}</Nav.Link> */}
-                        <Nav.Link><AniLink to={link.link} cover direction="down" duration={1} bg="#000" style={{color: `white`, textDecoration: `none`,}}>{link.name}</AniLink></Nav.Link>
+                        {/* <Nav.Link href={link.link}><AniLink to={link.link} cover direction="down" duration={1} bg="#000" style={{color: `white`, textDecoration: `none`,}}>{link.name}</AniLink></Nav.Link> */}
+                        <AniLink to={link.link} cover direction="down" duration={1} bg="#000" style={{textDecoration: `none`,}}>{link.name}</AniLink>
+                        {/* <Nav.Link style={{color:`white`}} href={link.link}>{link.name}</Nav.Link>  */}
                     </Nav.Item>
                 ))
             }

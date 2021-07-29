@@ -601,12 +601,13 @@ pre tt:after {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 }
 .navbar-collapse.collapse{
-  margin-top:10px !important;
-  padding-left: 10px !important;
+  transition: ease-in-out all .5s !important;
+  margin-top: 10px !important;
 }
 .nav-item > a{
   transition: 0.3s !important;
   color: rgb(175, 175, 175) !important;
+  padding: 9px !important;
 }
 .nav-item > a:hover, .nav-item > a:focus{
   background-color: #222222;
@@ -627,15 +628,29 @@ pre tt:after {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 }
 
-@media only screen and (max-width: 600px) and (min-width: 350px) {
+
+/* SMART */
+@media only screen and (max-width: 992px) and (min-width: 350px) {
   #siteTitle{
     font-size: 28px !important;
   }
   #siteSlogan{
     font-size: 12px !important;
   }
+
+  .navbar-collapse.collapse{
+    margin-top: 10px !important;
+  }
+
+  .nav-item {
+    margin: 3px 0px !important;
+  }
+
+ 
 }
 
+
+/* IPHONE 5 */
 @media only screen and (max-width: 349px) and (min-width: 300px){
   #siteTitle{
     font-size: 24px !important;
@@ -643,13 +658,24 @@ pre tt:after {
   #siteSlogan{
     font-size: 12px !important;
   }
+
+  .navbar-collapse.collapse{
+    margin-top: 20px !important;
+    padding-left: 0px !important;
+  }
 }
 
+/* GALAXY FOLD */
 @media only screen and (max-width: 299px){
   #siteTitle{
     font-size: 20px !important;
   }
   #siteSlogan{
     font-size: 12px !important;
+  }
+
+  .navbar-collapse.collapse{
+    margin-top: 20px !important;
+    padding-left: 0px !important;
   }
 }
